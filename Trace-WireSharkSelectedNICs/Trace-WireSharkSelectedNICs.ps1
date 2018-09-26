@@ -141,8 +141,6 @@ $ErrorActionPreference = "Stop"
     WriteInfo "The following adapter(s) were selected" -AdditionalMultilineString ($SelectedNICs | Format-Table | Out-String )
 #endregion: Get Network Adatpers from PowerShell
 
-
-
 #region:Get WireShark NIC lists
     WriteInfo "Getting list of NICs using WireShark dumpcap.exe"
     $WireSharkNICS = & "C:\Program Files\Wireshark\dumpcap.exe" -D -M |ForEach-Object{
