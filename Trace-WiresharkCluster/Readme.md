@@ -1,29 +1,17 @@
 # Trace-WireSharkSelectedNICs.ps1
-Use this script to start tracing of selected NICs using WireShark
+Use this script to start Wireshark tracing on all cluster nodes until we get event 1135 on each node.
 
 Read more about it on [PlusOnTech.com](https://plusontech.com/2018/09/25/powershell-script-trace-wiresharkselectednics-ps1-collect-wireshark-traces-from-multiple-network-adapters/ "PlusOnTech.com post about Trace-WireSharkSelectedNICs script").
 ## Examples
+* Trace and save to C:\WireSharkTrace folder on each of the nodes.
 ```PowerShell
-.\Trace-WireSharkSelectedNICs.ps1 -TracePath C:\WireSharkTrace
+.\Trace-WiresharkCluster.ps1 -TracePath C:\WireSharkTrace
 ```
-This will trace the selected NICs and save to C:\WireSharkTrace folder.
-The files will use the name "ComputerName_FileNumber_TimeStamp.pcap"
-File size will be 200 MB and it will create a maximum of 80 files.
-
+* Trace only traffic on port 8080
 ```PowerShell
-.\Trace-WireSharkSelectedNICs.ps1 -TracePath C:\WireSharkTrace -TraceNamePrefix "$env:ComputerName_Test1" -FileSizeMB 120 -Files 5
+.\Trace-WiresharkCluster.ps1 -TracePath C:\WireSharkTrace -CaptureFilter "Port 8080"
 ```
-This will trace the selected NICs and save to C:\WireSharkTrace folder.
-The files will use the name "ComputerName_Test1_FileNumber_TimeStamp.pcap"
-Files size will be 120 MB and it will create a maximum of 5 files.
-
+* Trace and save log to "C:\WireSharkClusterTrace.log"
 ```PowerShell
-.\Trace-WireSharkSelectedNICs.ps1 -TracePath C:\WireSharkTrace -CaptureFilter "Port 8080"
+.\Trace-WiresharkCluster.ps1 -TracePath C:\WireSharkTrace -LogPath "C:\WireSharkClusterTrace.log"
 ```
-This will trace the selected NICs and save to C:\WireSharkTrace folder.
-It will only capture traffic going to port 8080
-
-```PowerShell
-.\Trace-WireSharkSelectedNICs.ps1 -TracePath C:\WireSharkTrace -Compress
-```
-This will trace the selected NICs and compress the results in to C:\WireSharkTrace\ComputerName_Date_Time.zip file.
