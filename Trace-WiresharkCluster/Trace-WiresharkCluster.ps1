@@ -36,7 +36,7 @@
 .LINK
 https://github.com/WillyMoselhy/WireShark-Tracing/tree/master/Trace-WiresharkCluster
 .LINK
-https://plusontech.com/2018/09/25/powershell-script-trace-wiresharkselectednics-ps1-collect-wireshark-traces-from-multiple-network-adapters/
+https://plusontech.com/2018/10/02/powershell-script-trace-wiresharkcluster-ps1-collect-wireshark-traces-from-all-failover-cluster-nodes/
 #>
 
 Param(

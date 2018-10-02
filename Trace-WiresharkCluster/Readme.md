@@ -1,7 +1,7 @@
 # Trace-WireSharkSelectedNICs.ps1
 Use this script to start Wireshark tracing on all cluster nodes until we get event 1135 on each node.
 
-Read more about it on [PlusOnTech.com](https://plusontech.com/2018/09/25/powershell-script-trace-wiresharkselectednics-ps1-collect-wireshark-traces-from-multiple-network-adapters/ "PlusOnTech.com post about Trace-WireSharkSelectedNICs script").
+Read more about it on [PlusOnTech.com](https://plusontech.com/2018/10/02/powershell-script-trace-wiresharkcluster-ps1-collect-wireshark-traces-from-all-failover-cluster-nodes/ "PlusOnTech.com post about Trace-WiresharkCluster script").
 ## Examples
 * Trace and save to C:\WireSharkTrace folder on each of the nodes.
 ```PowerShell
