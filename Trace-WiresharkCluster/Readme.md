@@ -7,6 +7,12 @@ Read more about it on [PlusOnTech.com](https://plusontech.com/2018/09/25/powersh
 ```PowerShell
 .\Trace-WiresharkCluster.ps1 -TracePath C:\WireSharkTrace
 ```
+
+* Trace all NICs on a remote cluster and save to C:\WireSharkTrace folder.
+```PowerShell
+.\Trace-WiresharkCluster.ps1 -TracePath C:\WireSharkTrace -ClusterName ExampleCluster.domain.com
+```
+    
 * Trace only traffic on port 8080
 ```PowerShell
 .\Trace-WiresharkCluster.ps1 -TracePath C:\WireSharkTrace -CaptureFilter "Port 8080"

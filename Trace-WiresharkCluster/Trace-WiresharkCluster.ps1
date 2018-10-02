@@ -12,13 +12,17 @@
 
     This will trace and save to C:\WireSharkTrace folder on each of the nodes.
 .EXAMPLE
+    PS C:\> .\Trace-WiresharkCluster.ps1 -TracePath C:\WireSharkTrace -ClusterName ExampleCluster.domain.com
+
+    This will trace all NICs on a remote cluster and save to C:\WireSharkTrace folder.
+.EXAMPLE
     PS C:\> .\Trace-WiresharkCluster.ps1 -TracePath C:\WireSharkTrace -CaptureFilter "Port 8080"
 
     This will trace only traffic on port 8080
 .EXAMPLE
     PS C:\> .\Trace-WiresharkCluster.ps1 -TracePath C:\WireSharkTrace -CaptureFilter "Port 8080"
 
-    This will trace the selected NICs and save to C:\WireSharkTrace folder.
+    This will trace all NICs and save to C:\WireSharkTrace folder.
     It will only capture traffic going to port 8080
 .EXAMPLE
     PS C:\> .\Trace-WiresharkCluster.ps1 -TracePath C:\WireSharkTrace -LogPath "C:\WireSharkClusterTrace.log"
@@ -30,7 +34,7 @@
 .OUTPUTS
     None.
 .LINK
-https://github.com/WillyMoselhy/WireShark-Tracing/tree/master/Trace-WireSharkSelectedNICs
+https://github.com/WillyMoselhy/WireShark-Tracing/tree/master/Trace-WiresharkCluster
 .LINK
 https://plusontech.com/2018/09/25/powershell-script-trace-wiresharkselectednics-ps1-collect-wireshark-traces-from-multiple-network-adapters/
 #>
