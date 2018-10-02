@@ -3,10 +3,10 @@ Use this script to start tracing of selected NICs using WireShark
 
 Read more about it on [PlusOnTech.com](https://plusontech.com/2018/09/25/powershell-script-trace-wiresharkselectednics-ps1-collect-wireshark-traces-from-multiple-network-adapters/ "PlusOnTech.com post about Trace-WireSharkSelectedNICs script").
 ## Examples
+* Trace the selected NICs and save to C:\WireSharkTrace folder.
 ```PowerShell
 .\Trace-WireSharkSelectedNICs.ps1 -TracePath C:\WireSharkTrace
 ```
-This will trace the selected NICs and save to C:\WireSharkTrace folder.
 The files will use the name "ComputerName_FileNumber_TimeStamp.pcap"
 File size will be 200 MB and it will create a maximum of 80 files.
 
